@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabinet Dentaire</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS (Animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">🦷 Dentist</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1 class="display-3 fw-bold">A Brighter Smile Starts Here</h1>
+      <p class="lead">Your Dental Health, Our Priority</p>
+      <a href="#services" class="btn btn-primary btn-lg mt-3">Découvrir nos services</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="about-img">
+            <img src="img/A-Plus Dentistry _ Expert Dental Care in Cumming, GA.jpeg" alt="Cabinet Dentaire" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <h2 class="fw-bold mb-4">À propos de notre cabinet</h2>
+          <p>
+            Notre cabinet dentaire moderne est dédié à offrir des soins de qualité supérieure dans un
+            environnement chaleureux et accueillant. Nous combinons technologie avancée, expertise
+            médicale et approche humaine pour garantir le meilleur traitement possible à chacun de nos patients.
+          </p>
+          <p>
+            Que ce soit pour un simple contrôle, un soin esthétique ou un traitement orthodontique,
+            notre équipe veille à ce que vous retrouviez confiance en votre sourire.
+          </p>
+          <a href="#contact" class="btn btn-primary mt-3">Prendre rendez-vous</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-down">Nos Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card service-card text-center p-4">
+            <i class="bi bi-brightness-high fs-1 text-primary mb-3"></i>
+            <h5>Blanchiment</h5>
+            <p>Obtenez un sourire éclatant grâce à nos techniques modernes de blanchiment dentaire.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card service-card text-center p-4">
+            <i class="bi bi-braces fs-1 text-primary mb-3"></i>
+            <h5>Orthodontie</h5>
+            <p>Alignez vos dents avec des solutions discrètes et efficaces pour tous les âges.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card service-card text-center p-4">
+            <i class="bi bi-heart-pulse fs-1 text-primary mb-3"></i>
+            <h5>Soins dentaires</h5>
+            <p>Des soins complets pour maintenir la santé et la beauté de vos dents.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 contact-section">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-right">Contactez-nous</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6" data-aos="fade-up">
+          <form class="p-4 bg-white shadow rounded" action="contact.php" method="POST">
+          <div class="mb-3">
+              <input type="text" name="name" class="form-control" placeholder="Nom complet" required>
+          </div>
+          <div class="mb-3">
+              <input type="email" name="email" class="form-control" placeholder="Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea name="message" class="form-control" rows="4" placeholder="Votre message" required></textarea>
+          </div>
+  <button class="btn btn-primary w-100" type="submit">Envoyer</button>
+</form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cabinet Dentaire | Tous droits réservés</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // durée de l'animation
+      once: true      // animation seulement 1 fois
+    });
+
+    // Navbar background change on scroll
+    window.addEventListener("scroll", function() {
+      let navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+</html>
